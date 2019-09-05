@@ -1,0 +1,21 @@
+		pre.setString(i++,s.getMonths());
+			pre.setString(i++,s.getDprivate());
+			pre.setString(i++,s.getCountry());
+			pre.setString(i++,s.getProvince());
+			pre.setString(i++,s.getCity());
+			pre.setString(i++,s.getMark());
+			pre.setString(i++,s.getNation());
+			pre.setInt(i++,s.getLevels());
+			pre.setString(i++,s.getStar());
+			pre.setInt(i++,s.getStatus());
+			pre.setString(i++, s.getIpadd());
+			pre.setInt(i++, s.getPort());
+			int ii=pre.executeUpdate();
+			if(ii>0){
+				return true;
+			}
+			pre.close();
+			conn.close();
+		} catch (SQLException e) {
+			// TODO 自动生成的 catch 块
+			e
